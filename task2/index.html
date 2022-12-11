@@ -1,12 +1,256 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="t1-1 blue" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <title>{{CHECKOUT_HTML_DEFAULT_TITLE}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta http-equiv="Cache-Control" content="max-age=172800, must-revalidate" />
+    <link rel="icon" href="/content/f/164832/favicon.png" type="image/x-icon">
+    {{CHECKOUT_STYLES_ADB_NV}}
+    <link rel="stylesheet" href="/content/f/3/1.8_abd_tpl_new/css/step-css-fix.css{{STYLES_VERSION_CONTROL}}">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/content/f/164734/media-queries.css">
+    <style>
+        html,body{
+           
+            background:#FFFFFF;}
+        header{
+            background: #FFFFFF;
+            border-bottom: 1px solid #CFD8DC;
+            padding: 1px 0;
+        }
+        header .select2-container .select2-choice>.select2-chosen {
+        line-height: 31px;
+        color: #414C56;
+        font-weight: 500;
+        font-size: 12px;
+        }
+        .page-logo {
+            display: block;
+            padding: 12px 0;
+        }
+        .qty-block {
+            display: none;
+        }
+        .submit-area .btn.btn-primary {
+            width: 100%;
+        }
+         div.products-and-customer-info{
+            background-color: #FFFFFF;
+            background: linear-gradient(116.91deg, #A71986 0%, #2B4A90 100%);
+            border-radius: 40px;
+            padding: 24px;
+         }
+         #checkout_wrap{
+             background:url(/content/f/164734/bg.svg) no-repeat;
+             background-position: center 35%;
+             background-attachment: fixed;
+         }
+         .pci, .trustedsite, .norton, .visa-secure {
+             background-size:contain;
+            width: 68px;
+            height: 36px;
+        }
+          span.ppg-24hour:before {
+        background: none;
+        content: '\e807';
+        color: #01BE5D;
+        position: relative;
+        bottom: 3px;
+        margin-right: 5px
+        }
+         .form-block.clearfix .personal-info.billing-info .sub-header,
+         .container-header{
+         font-weight: 700;
+         font-size: 24px;
+         line-height: 24px;
+         }
+          .allow-recurring label, .form-block .checkbox.in-form label, .skip-trial label{
+          background: url(/content/f/164734/checkbox-inactive.svg) left center no-repeat!important;
+        }
+        .allow-recurring.checked label, .form-block .checkbox.checked.in-form label, 
+        .skip-trial.checked label{
+           background: url(/content/f/164734/checkbox-active.svg) left center no-repeat!important; 
+        } 
+        .input-icon i.ppg-help, .ppg-help {
+        color: #FFD4C6;
+        }
+        .select2-container .select2-choice .select2-arrow b{
+           background-image: url(/content/f/164734/arrow.svg)!important;
+       }
+       .lang-curr div.form-control {
+        
+             border-color: #CFD8DC!important;
+             background:#fff;
+             box-shadow: none;
+             text-shadow: none;
+             color:#414C56;
+             }
+             .form-block.clearfix .payment-info.pm-select .form-group .form-control, 
+        .form-block.clearfix .personal-info.billing-info .form-group .form-control, 
+        .form-control, 
+        .coupon-data input{
+         background: #FFFFFF;
+       border: 1px solid #D0D8DB;
+        border-radius: 6px!important;
+        height: 32px!important;
+        color:#414C56;
+        }
+         input::placeholder{
+            color: #ADB9C0!important;
+            font-style: normal!important;
+            font-size: 12px;
+        }
+        .payment-info{
+            border-top: 1px solid #D0D8DB;
+        }
+                .payment-info.pm-tabs .payment-method-inner {
+         background: #fff;
+         border: 1px solid #D0D8DB;
+         padding: 11px;
+         padding-top: 10px;
+         border-radius: 0 0 7px 7px;
+         }
+         .payment-info.pm-tabs .payment-method-block .primary-payment-methods>.ppm.active {
+          background: #FFF;
+         border-radius: 7px 7px 0 0;
+         border: 1px solid #D0D8DB
+         border-bottom:none;
+         }
+         .payment-info.pm-tabs .payment-method-block .primary-payment-methods>.ppm{
+          background: #fff;
+          height: 38px;
+          border-radius: 7px 7px 0 0;
+          border: 1px solid#D0D8DB;
+          border-bottom:1px solid#D0D8DB
+
+        }
+        
+         .blue .submit-area .btn, .blue .submit-area .btn:focus {
+            background: #FF5722!important;
+            border-radius: 6px;
+          
+            text-transform: uppercase;
+            font-size: 15px;
+
+          }
+         .blue .submit-area .btn:hover{
+            background: #EE7850!important;
+         } 
+         .products-info{
+             border: 1px solid #D0D8DB;
+         }
+         .product-list{
+             border:none;
+         }
+        .order-total-block{
+            background: #ECEFF1;
+            border-top: 1px solid #D0D8DB;
+            border-radius: 6px;
+            border-radius: 0 0 6px 6px;
+         }
+         .item-specials, .item-trial {
+          color: #0487FF;
+        }
+        .payment.first-payment span, .additional-offers .new-price {
+        color: #838993!important;  
+        }
+        .color-blue {
+            color: #414C56;
+            font-size: 12px;
+        }
+        .order-total-block .order-total{
+            color: #373A3C;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        div.col-md-12.order-total-tax > div{
+                margin-bottom: 6px;
+        }
+        #s2id_language > a > span.select2-arrow > b{
+            margin-top:5px;
+        }
+        #s2id_currency > a > span.select2-arrow > b{
+           margin-top:5px;  
+        }
+         #corporate{
+             color: #373A3C;
+         }
+        .item-name{
+            color: #373A3C;
+        }
+        .item-specials, .item-trial {
+    color: #0487FF;
+}
+    </style>
 </head>
 <body>
-    <script src="index.js"></script>
+       <div id="checkout_wrap">
+        {{CHECKOUT_FORM_BEGIN}}
+            <header class="checkout-header">
+                <div class="container-lg">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-6 checkout-logo">
+                            <img class="page-logo" src="/content/f/164832/logo.svg" alt="Logo">
+                        </div>
+                        <div class="d-none">
+                            {{CHECKOUT_STEPS_IND_MIN_NV}}
+                        </div>
+                        <div class="col-md-4 col-sm-6 lang-curr">
+                            <div class="row justify-content-end">
+                                {{CHECKOUT_LANGUAGE_D3}}
+                                {{CHECKOUT_CURRENCY_D3}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="checkout-step" id="checkout-step-1">
+                <div class="container">
+                    <div class="products-and-customer-info">
+                        <div class="row">
+                            <div class="col-md-6 order-md-last order-sm-first">
+                          <div class="strip">
+                                {{CHECKOUT_PRODUCTS_ADB_NV3_UPD}}
+                                </div>
+                                {{CHECKOUT_PROMO_ADB_NV3_UPD}}
+                               
+                                  <div class="d-none d-lg-block d-md-block">
+                                        {{CHECKOUT_SUBMIT_ADB}}
+                                    </div>
+                            </div>
+                            <div class="col-md-6 order-md-first order-sm-last">
+                                <div class="form-block clearfix">
+                                    {{CHECKOUT_PERSONAL_BILLING_INFO_ADB_NV}}
+                                    {{CHECKOUT_PAYMENT_INFO_ADB_NV}}
+                                    {{CUSTOM_FIELD_ADB_NV}}
+                                    {{CHECKOUT_CAPTCHA_1}}
+                                    {{CHECKOUT_COUPON_CODE_ADB_NV_IA_STEP_3}}
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            {{CHECKOUT_ERRORS_BS4}}
+                           <div class="d-block d-lg-none d-md-none">
+                                {{CHECKOUT_SUBMIT_ADB}}
+                            </div>
+                            {{CHECKOUT_SERVICE_INFO_ADB_VISA}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-block">
+                <div class="container">
+                    {{CHECKOUT_FOOTER_BS4_NV}}
+                </div>
+            </div>
+        {{CHECKOUT_FORM_END}}
+    </div>
+    {{CHECKOUT_STANDARD_JS_BS4_MIN_NV}}
+      <script defer src="/content/f/164734/media.js"></script>
 </body>
 </html>
